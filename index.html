@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="estilos/mobile.css">
+    <link rel="stylesheet" href="estilos/telaG.css" media="screen and (min-width:768px)" >
+</head>
+<body>
+    <div class="container" >
+
+        <header>
+            <h1>Lista de Tarefas</h1>
+            <p>Insira suas tarefas e objetivos aqui, clique para marcar como concluido e remova quando quiser.</p>
+        </header>
+        
+        <main>
+
+            <div class="cabeca-lista">
+
+                <div class="bloco-botao">
+                    <input type="text" id="tarefaNome" placeholder="Insira o nome da tarefa" >
+                    <button onclick="addTarefa()" >Adicionar Tarefa</button>
+                </div>  
+
+                <div class="bloco-botao">
+                    <input type="text" id="desc" placeholder="Escreva sobre a tarefa..." minlength="5" maxlength="30" >
+                </div>
+
+            </div>
+
+            <div class="bloco-info" >
+                <div>
+                    <label for="tarefaValor">Tarefas</label>
+                    <div id="tarefaValor">0</div> 
+                </div>
+
+                <div>
+                    <label for="tarefaCat">Categoria</label>
+
+                    <select name="categorias" id="tarefaCat">
+
+                        <option value="todTare">Todas</option>
+                        <option value="penTare">Pendentes</option>
+                        <option value="conTare">Concluidas</option>
+
+                    </select>
+
+                    <button id="btCat" >Verificar</button>
+                </div>
+
+            </div>  <!-- FIM DO BLOCO DE INFO -->
+
+            <ol id="listaTarefas" >
+                
+            </ol>
+        </main>
+        
+            
+    </div> <!-- FIM DO CONTAINER -->
+    
+    <script src="script.js"></script>
+</body>
+</html>
