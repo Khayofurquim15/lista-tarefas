@@ -20,18 +20,15 @@
             <div class="cabeca-lista">
 
                 <div class="bloco-botao">
+                    <h3>Nome da Tarefa</h3>
                     <input type="text" id="tarefaNome" placeholder="Insira o nome da tarefa" >
-                    <button onclick="addTarefa()" >Adicionar Tarefa</button>
+                   <button onclick="addTarefa()" >Adicionar Tarefa</button> 
                 </div>  
-
-                <div class="bloco-botao">
-                    <input type="text" id="desc" placeholder="Escreva sobre a tarefa..." minlength="5" maxlength="30" >
-                </div>
-
+                
             </div>
 
             <div class="bloco-info" >
-                <div>
+                <div class="bloco-valor" >
                     <label for="tarefaValor">Tarefas</label>
                     <div id="tarefaValor">0</div> 
                 </div>
@@ -41,13 +38,13 @@
 
                     <select name="categorias" id="tarefaCat">
 
-                        <option value="todTare">Todas</option>
-                        <option value="penTare">Pendentes</option>
-                        <option value="conTare">Concluidas</option>
+                        <option value="todas">Todas</option>
+                        <option value="pendentes">Pendentes</option>
+                        <option value="feitas">Concluidas</option>
 
                     </select>
 
-                    <button id="btCat" >Verificar</button>
+                    <button onclick="renderizarTela()" >Selecionar</button>
                 </div>
 
             </div>  <!-- FIM DO BLOCO DE INFO -->
